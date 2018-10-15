@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ESP-8266配置-闪龙科技</title>
+</head>
+<body>
+  <h1>AP设置</h1>
+    <label>AP名称:<input type="text" name="ap_name"></label></br>
+    <label>AP密码:<input type="text" name="ap_password"></label></br>
+    <label>安全性:
+    <select name="ap_encrypt">
+      <option value="AUTH_OPEN">开放</option>
+      <option value="AUTH_WEP">WEP</option>
+      <option value="AUTH_WPA_PSK">WPA_PSK</option>
+      <option value="AUTH_WPA2_PSK">WPA2_PSK</option>
+      <option value="AUTH_WPA_WPA2_PSK">WPA_WPA2_PSK</option>
+    </select>
+    </label></br>
+    <label>AP IP地址:<input type="text" name="ap_ipaddress"></label></br>
+    <label>AP 掩码地址:<input type="text" name="ap_netmask"></label></br>
+    <label>AP 网关地址:<input type="text" name="ap_gateway_address"></label></br>
+
+  <h1>STA设置</h1>
+    <label>AP 名称:<input type="text" name="sta_name"></label></br>
+    <label>AP 密码:<input type="text" name="sta_password"></label></br>
+    <input type="submit" name="submit" value="submit">
+
+  <h1>网络设置</h1>
+    <label>
+      SOCKET 类型:
+      <label><input type="radio" name="nw_type" value="Server" checked>Server</label>
+    <label><input type="radio" name="nw_type" value="Client">Client</label></br>
+    </label>
+    <label>
+      协议类型:
+      <label><input type="radio" name="nw_trans" value="TCP" checked>TCP</label>
+    <label><input type="radio" name="nw_trans" value="UDP">UDP</label></br>
+    </label>
+    <label>远程IP:<input type="text" name="remote_ip"></label></br>
+    <label>本地端口:<input type="text" name="local_port"></label></br>
+    <label>远程端口:<input type="text" name="remote_port"></label></br>
+
+    <input type="button" name="submit" value="submit" onclick="submitForm()">
+
+
+	<script type="text/javascript">
+	function submitForm()
+	{
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		}
+		else
+		{// code for IE6, IE5
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				console.log("yes");
+			}
+		}
+		xmlhttp.open("POST","info",true);
+		xmlhttp.send("nihao");
+	}
+	</script>
+
+
+</body>
+</html>

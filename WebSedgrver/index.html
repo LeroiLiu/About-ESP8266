@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ESP-8266配置-闪龙科技</title>
+  <link rel="icon" href="data:;base64,=">
+</head>
+<style type="text/css">
+body>div{
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background: #4285f4;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  box-shadow:0px 0px 10px #000;
+  font-size: 20px;
+}
+form>div{
+  width: 500px;
+  margin: 5px auto;
+}
+label>div{
+  float: left;
+  width: 160px;
+}
+label>input[type="text"],label>select{
+  width: 250px;
+  border-radius: 10px;
+  text-align: center;
+}
+label>span>input[type="text"]{
+  width: 45px;
+  border-radius: 10px;
+  text-align: center;
+}
+input[type="submit"]{
+  margin-top:30px;
+  margin-bottom: 10px;
+  width: 100px;
+  background: #45c01a;
+  line-height: 30px;
+  border:none;
+  border-radius: 5px;
+  color:#fff;
+  font-size: 20px;
+}
+</style>
+<body>
+
+  <div>
+    <form method="post" action="info.php">
+      <h2>AP设置</h2>
+        <div><label><div>AP名称:</div><input type="text" name="ap_name"></label></div>
+        <div><label><div>AP密码:</div><input type="text" name="ap_password"></label></div>
+        <div><label><div>安全性:</div>
+        <select name="ap_encrypt">
+          <option value="AUTH_OPEN">开放</option>
+          <option value="AUTH_WEP">WEP</option>
+          <option value="AUTH_WPA_PSK">WPA_PSK</option>
+          <option value="AUTH_WPA2_PSK">WPA2_PSK</option>
+          <option value="AUTH_WPA_WPA2_PSK">WPA_WPA2_PSK</option>
+        </select>
+        </label></div>
+        <div><label><div>AP IP地址:</div><span><input type="text" name="ap_ipaddress_1"> . <input type="text" name="ap_ipaddress_2"> . <input type="text" name="ap_ipaddress_3"> . <input type="text" name="ap_ipaddress_4"></span></label></div>
+        <div><label><div>AP 掩码地址:</div><input type="text" name="ap_netmask"></label></div>
+        <div><label><div>AP 网关地址:</div><input type="text" name="ap_gateway_address"></label></div>
+
+      <h2>STA设置</h2>
+        <div><label><div>AP 名称:</div><input type="text" name="sta_name"></label></div>
+        <div><label><div>AP 密码:</div><input type="text" name="sta_password"></label></div>
+
+      <h2>网络设置</h2>
+        <div><label>
+          <div>SOCKET 类型:</div>
+          <label><input type="radio" name="nw_type" value="Server" checked>Server</label>
+          <label><input type="radio" name="nw_type" value="Client">Client</label>
+        </label></div>
+        <div><label>
+          <div>协议类型:</div>
+          <label><input type="radio" name="nw_trans" value="TCP" checked>TCP</label>
+          <label><input type="radio" name="nw_trans" value="UDP">UDP</label>
+        </label></div>
+
+        <div><label><div>远程IP:</div><input type="text" name="remote_ip"></label></div>
+        <div><label><div>本地端口:</div><input type="text" name="local_port"></label></div>
+        <div><label><div>远程端口:</div><input type="text" name="remote_port"></label></div>
+
+    	<input type="submit" name="submit" value="submit">
+    </form>
+  </div>
+
+</body>
+</html>
