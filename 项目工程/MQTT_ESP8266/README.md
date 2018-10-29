@@ -1,20 +1,20 @@
 # 使用方法
 
-例如两个模块同时烧入了此程序，则通过串口进行配置，
+    例如两个模块同时烧入了此程序，则通过串口进行配置，
 
-首先按照“ssid:password:selfname:targetname?”格式进行配置。
+    首先按照“ssid:password:selfname:targetname?”格式进行配置。
 
-例如有两个模块分别名为name1和name2。
+    例如有两个模块分别名为name1和name2。
 
-wifi名称和密码为ssid和password。
+    wifi名称和密码为ssid和password。
 
-（此处为了方便两个连接的一个wifi，实际操作时可以是两个不同的wifi）
+    （此处为了方便两个连接的一个wifi，实际操作时可以是两个不同的wifi）
 
-则首先打开各自的串口分别发送：
+    则首先打开各自的串口分别发送：
 
     “ssid:password:name1:name2?”（name1向name2发送数据）、
 
-“ssid:password:name2:name1?”（name2向name1发送数据）
+    “ssid:password:name2:name1?”（name2向name1发送数据）
 
 # 注意
 
