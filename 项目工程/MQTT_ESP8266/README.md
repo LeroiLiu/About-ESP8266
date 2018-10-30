@@ -51,5 +51,10 @@
     7、固件编译与烧写时需要在“工具->开发板”中选择ESP8266的开发板（Generic ESP8266 Module）
     
     8、可以去烧写了
+
+# MQTT客户端
     
+    此模块安装的API文档请参考：https://pubsubclient.knolleary.net/
+    
+    其他客户端：请参考：http://emqtt.com/clients
     
